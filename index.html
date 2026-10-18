@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Card & Resume</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; color: #1e293b; background-color: #f1f5f9; line-height: 1.6; }
+        
+        /* Layout Container */
+        .page-wrapper { max-width: 650px; margin: 30px auto; padding: 0 15px; }
+        
+        /* CARD 1: DIGITAL BUSINESS CARD HEADER */
+        .biz-card { background: #0f172a; color: white; border-radius: 16px; padding: 35px 30px; text-align: center; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15); position: relative; overflow: hidden; }
+        .biz-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #2563eb, #38bdf8); }
+        
+        .avatar { width: 90px; height: 90px; border-radius: 50%; background: #2563eb; color: white; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; margin: 0 auto 15px auto; border: 3px solid #334155; }
+        .biz-card h1 { margin: 0 0 5px 0; font-size: 26px; font-weight: 800; color: #f8fafc; }
+        .title-badge { display: inline-block; background: #1e293b; color: #38bdf8; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 20px; border: 1px solid #334155; margin-bottom: 15px; }
+        .biz-card p { color: #94a3b8; font-size: 14px; max-width: 450px; margin: 0 auto 25px auto; }
+
+        /* QUICK ACTION BUTTONS */
+        .action-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px; }
+        .btn-action { background: #1e293b; color: #f8fafc; border: 1px solid #334155; text-decoration: none; padding: 12px 10px; border-radius: 8px; font-size: 13px; font-weight: 600; text-align: center; transition: all 0.2s; display: block; }
+        .btn-action:hover { background: #334155; border-color: #38bdf8; }
+        .btn-primary-action { background: #2563eb; color: white; border: none; }
+        .btn-primary-action:hover { background: #1d4ed8; }
+
+        /* CARD 2: RESUME & BIO CONTENT */
+        .content-card { background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 30px; margin-top: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .section-header { font-size: 18px; color: #0f172a; margin-top: 0; margin-bottom: 15px; font-weight: 800; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px; }
+        
+        /* Timeline Items */
+        .timeline-item { border-left: 2px solid #e2e8f0; padding-left: 15px; margin-left: 5px; margin-bottom: 20px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -6px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #2563eb; }
+        .timeline-date { font-size: 12px; color: #2563eb; font-weight: 700; text-transform: uppercase; }
+        .timeline-item h3 { margin: 2px 0; font-size: 15px; color: #0f172a; }
+        .timeline-item p { margin: 0; font-size: 13px; color: #64748b; }
+
+        /* Skills Tags */
+        .skills-wrap { display: flex; gap: 8px; flex-wrap: wrap; }
+        .skill-chip { background: #f1f5f9; color: #334155; padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; border: 1px solid #e2e8f0; }
+
+        /* Form Styling */
+        .form-group { margin-bottom: 12px; text-align: left; }
+        .form-group label { display: block; font-weight: 600; font-size: 12px; margin-bottom: 4px; color: #334155; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-size: 13px; }
+
+        footer { text-align: center; padding: 20px; color: #94a3b8; font-size: 12px; }
+
+        @media (max-width: 480px) {
+            .action-buttons { grid-template-columns: 1fr 1fr; }
+            .biz-card { padding: 25px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- DIGITAL BUSINESS CARD HEADER -->
+        <div class="biz-card">
+            <div class="avatar">JJ</div>
+            <h1>Jessica Jaynes</h1>
+            <span class="title-badge">Web Design & Business Solutions</span>
+            <p>Crafting custom web applications, digital product systems, and streamlined online tools for small businesses.</p>
+
+            <div class="action-buttons">
+                <a href="#" onclick="alert('Resume PDF download initiated!')" class="btn-action btn-primary-action">📄 Download Resume</a>
+                <a href="#contact" class="btn-action">✉️ Send Message</a>
+                <a href="#" onclick="alert('Saving Contact VCF Card...')" class="btn-action">📇 Save Contact</a>
+                <a href="#" onclick="alert('Opening LinkedIn...')" class="btn-action">🔗 Connect</a>
+            </div>
+        </div>
+
+        <!-- RESUME SUMMARY & EXPERIENCE -->
+        <div class="content-card">
+            <div class="section-header">
+                <span>💼 Professional Experience</span>
+                <span style="font-size: 12px; color: #64748b; font-weight: normal;">Summary</span>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">2025 - Present</span>
+                <h3>Founder & Lead Designer — WebWorks</h3>
+                <p>Designing and deploying responsive, single and multi-page web applications, client booking systems, and digital assets.</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">2025 - Present</span>
+                <h3>Digital Store Operations — Digital Dinners</h3>
+                <p>Developing structured digital products, automated Stripe checkout links, and user guides for online distribution.</p>
+            </div>
+        </div>
+
+        <!-- TECHNICAL SKILLS & CAPABILITIES -->
+        <div class="content-card">
+            <div class="section-header">
+                <span>⚡ Core Capabilities</span>
+            </div>
+            <div class="skills-wrap">
+                <span class="skill-chip">HTML5 / CSS3</span>
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">Tailwind CSS</span>
+                <span class="skill-chip">UI/UX Layouts</span>
+                <span class="skill-chip">Responsive Web Design</span>
+                <span class="skill-chip">Stripe / Payment Systems</span>
+                <span class="skill-chip">GitHub Pages Hosting</span>
+            </div>
+        </div>
+
+        <!-- DIRECT CONNECT / CONTACT FORM -->
+        <div class="content-card" id="contact">
+            <div class="section-header">
+                <span>✉️ Quick Inquiries</span>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Inquiry sent successfully!');">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Jane Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="jane@example.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="3" placeholder="How can I help with your project?" required></textarea>
+                </div>
+                <button type="submit" class="btn-action btn-primary-action" style="width: 100%; padding: 12px; cursor: pointer;">Send Direct Inquiry →</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>© 2026 Jessica Jaynes. Digital Business Card & Portfolio Template.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
